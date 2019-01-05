@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const childProcess = require('child_process');
+const path = require('path');
+
+const canaryDir = path.resolve(__dirname, '..');
+
+const canaryVersion = process.env.CANARY_VERSION || 'latest';
+const unexpectedPackage = `unexpected@${canaryVersion}`;
+
+console.log(`>>> installing ${unexpectedPackage}`);
+
+childProcess.spawnSync(`npm install ${unexpectedPackage}`, {
+  cwd: canaryDir,
+  shell: true,
+  stdio: 'inherit'
+});

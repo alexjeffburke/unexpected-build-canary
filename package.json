@@ -1,0 +1,26 @@
+{
+  "name": "unexpected-build-canary",
+  "version": "0.0.0",
+  "description": "Automated build tester for Unexpected plugin ecosystem",
+  "scripts": {
+    "lint": "eslint ./scripts/*",
+    "test": "./scripts/install-unexpected && dont-break"
+  },
+  "author": "Alex J Burke <alex@alexjeffburke.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alexjeffburke/unexpected-build-canary.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dont-break": "^1.13.4",
+    "ncp": "^2.0.0",
+    "unexpected": "^10.40.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.0",
+    "eslint-config-pretty-standard": "^2.0.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "~1.15.3"
+  }
+}

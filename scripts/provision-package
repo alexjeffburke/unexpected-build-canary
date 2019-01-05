@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+const childProcess = require('child_process');
+const ncp = require('ncp').ncp;
+const path = require('path');
+
+const sourceDir = path.resolve(__dirname, '..');
+const sourceUnexpectedDir = path.join(
+  sourceDir,
+  'node_modules',
+  'unexpected',
+  'build',
+  'lib'
+);
+
+const targetModuleDir = process.cwd();
+const targetModuleUnexpectedDir = path.join(
+  targetModuleDir,
+  'node_modules',
+  'unexpected',
+  'build',
+  'lib'
+);
+
+console.log('>>> installing modules..');
+
+childProcess.spawnSync('npm install', {
+  cwd: process.cwd(),
+  shell: true,
+  stdio: 'inherit'
+});
+
+ncp(sourceUnexpectedDir, targetModuleUnexpectedDir, () => {
+  console.log('>>> synced unexpected');
+});
