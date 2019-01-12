@@ -7,9 +7,14 @@ const path = require('path');
 const projectDir = path.resolve(__dirname, '..');
 const dontBreakFilePath = path.join(projectDir, '.dont-break.json');
 
+const excludedPlugins = ['jsdom'];
+
 function getProjectsFromRepos(repos) {
   return repos
-    .filter(repo => repo.name.match(/^unexpected-\w+$/) !== null)
+    .filter(repo => {
+      const match = repo.name.match(/^unexpected-(\w+)$/);
+      return match !== null && !excludedPlugins.includes(match[1]);
+    })
     .map(repo => repo.clone_url);
 }
 
