@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const got = require('got');
+const path = require('path');
+
+const projectDir = path.resolve(__dirname, '..');
+const dontBreakFilePath = path.join(projectDir, '.dont-break.json');
+
+function getProjectsFromRepos(repos) {
+  return repos
+    .filter(repo => repo.name.match(/^unexpected-\w+$/) !== null)
+    .map(repo => repo.clone_url);
+}
+
+function updateDontBreakDefinition(projects) {
+  const dontBreakData = require(dontBreakFilePath);
+
+  dontBreakData.projects = projects;
+
+  fs.writeFileSync(dontBreakFilePath, JSON.stringify(dontBreakData, null, 2));
+}
+
+got('https://api.github.com/orgs/unexpectedjs/repos', { json: true })
+  .then(response => {
+    const projects = getProjectsFromRepos(response.body);
+
+    updateDontBreakDefinition(projects);
+  })
+  .catch(err => console.log(err));

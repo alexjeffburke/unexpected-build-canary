@@ -1,9 +1,5 @@
 {
   "postinstall": "$CURRENT_MODULE_DIR/scripts/provision-package",
   "pretest": false,
-  "projects": [
-    "https://github.com/unexpectedjs/unexpected-http.git",
-    "https://github.com/unexpectedjs/unexpected-mitm.git",
-    "https://github.com/unexpectedjs/unexpected-sinon.git"
-  ]
+  "projects": []
 }

@@ -4,7 +4,7 @@
   "description": "Automated build tester for Unexpected plugin ecosystem",
   "scripts": {
     "lint": "eslint ./scripts/*",
-    "test": "./scripts/install-unexpected && dont-break"
+    "test": "./scripts/install-unexpected && ./scripts/fetch-plugins && dont-break"
   },
   "author": "Alex J Burke <alex@alexjeffburke.com>",
   "repository": {
@@ -21,6 +21,7 @@
     "eslint": "^5.0.0",
     "eslint-config-pretty-standard": "^2.0.0",
     "eslint-plugin-prettier": "^2.6.0",
+    "got": "^9.5.0",
     "prettier": "~1.15.3"
   }
 }
