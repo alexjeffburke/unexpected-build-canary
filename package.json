@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "description": "Automated build tester for Unexpected plugin ecosystem",
   "scripts": {
-    "ci": "./scripts/fetch-plugins && dont-break --reporter html",
+    "ci": "dont-break --reporter html",
     "lint": "eslint ./scripts/*",
-    "test": "./scripts/fetch-plugins && dont-break",
-    "publish-breakage": "gh-pages -d breakage"
+    "test": "./scripts/fetch-plugins && dont-break --reporter spec",
+    "publish-breakage": "gh-pages -d breakage",
+    "update-plugins": "./scripts/fetch-plugins"
   },
   "author": "Alex J Burke <alex@alexjeffburke.com>",
   "repository": {
