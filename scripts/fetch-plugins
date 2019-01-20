@@ -3,17 +3,35 @@
 const fs = require('fs');
 const got = require('got');
 const path = require('path');
+const semver = require('semver');
 
 const projectDir = path.resolve(__dirname, '..');
 const dontBreakFilePath = path.join(projectDir, '.dont-break.json');
 
-const excludedPlugins = ['image', 'jsdom'];
+const excludedPlugins = {
+  'image': '*',
+  'jsdom': '*'
+};
+
+function checkPluginPolicy(pluginName) {
+  const pluginRule = excludedPlugins[pluginName];
+
+  if (!pluginRule) {
+    return true;
+  }
+
+  if (pluginRule === '*') {
+    return false;
+  }
+
+  return semver.satisfies(process.version, pluginRule);
+}
 
 function getProjectsFromRepos(repos) {
   return repos
     .filter(repo => {
       const match = repo.name.match(/^unexpected-(\w+)$/);
-      return match !== null && !excludedPlugins.includes(match[1]);
+      return match !== null && checkPluginPolicy(match[1]);
     })
     .map(repo => repo.clone_url);
 }
