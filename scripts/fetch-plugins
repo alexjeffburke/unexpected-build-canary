@@ -11,7 +11,8 @@ const dontBreakFilePath = path.join(projectDir, '.dont-break.json');
 const excludedPlugins = {
   'fs': '<=8',
   'image': '*',
-  'jsdom': '*'
+  'jsdom': '*',
+  'moment': '*'
 };
 
 function checkPluginPolicy(pluginName) {
