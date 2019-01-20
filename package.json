@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "description": "Automated build tester for Unexpected plugin ecosystem",
   "scripts": {
+    "ci": "./scripts/fetch-plugins && dont-break --reporter html",
     "lint": "eslint ./scripts/*",
-    "test": "./scripts/install-unexpected && ./scripts/fetch-plugins && dont-break"
+    "test": "./scripts/fetch-plugins && dont-break",
+    "publish-breakage": "gh-pages -d breakage"
   },
   "author": "Alex J Burke <alex@alexjeffburke.com>",
   "repository": {
@@ -13,7 +15,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "dont-break": "^1.13.4",
+    "dont-break": "git+https://github.com/alexjeffburke/dont-break.git#build-canary",
     "ncp": "^2.0.0",
     "semver": "^5.6.0",
     "unexpected": "^10.40.2"
@@ -22,6 +24,7 @@
     "eslint": "^5.0.0",
     "eslint-config-pretty-standard": "^2.0.0",
     "eslint-plugin-prettier": "^2.6.0",
+    "gh-pages": "^2.0.1",
     "got": "^8.3.2",
     "prettier": "~1.15.3"
   }
