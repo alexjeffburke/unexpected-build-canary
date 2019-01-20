@@ -9,7 +9,7 @@ const projectDir = path.resolve(__dirname, '..');
 const dontBreakFilePath = path.join(projectDir, '.dont-break.json');
 
 const excludedPlugins = {
-  'fs': '<=8',
+  'fs': '*',
   'image': '*',
   'jsdom': '*',
   'moment': '*'
