@@ -12,7 +12,8 @@ const excludedPlugins = {
   fs: '*',
   image: '*',
   jsdom: '*',
-  moment: '*'
+  moment: '*',
+  promise: '*'
 };
 
 function checkPluginPolicy(pluginName) {
