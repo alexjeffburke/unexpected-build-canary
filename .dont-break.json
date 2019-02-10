@@ -1,6 +1,7 @@
 {
   "package": "unexpected",
-  "pretest": false,
+  "pretest": true,
+  "pretestOrIgnore": true,
   "projects": [
     "https://github.com/unexpectedjs/unexpected-sinon.git",
     "https://github.com/unexpectedjs/unexpected-knockout.git",
