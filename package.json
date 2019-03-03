@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Automated build tester for Unexpected plugin ecosystem",
   "scripts": {
-    "ci": "fugl --config .dont-break.json --reporter html",
+    "ci": "fugl --config .dont-break.json --reporter html --ci",
     "lint": "eslint ./scripts/*",
     "test": "./scripts/fetch-plugins && fugl --config .dont-break.json --reporter spec",
     "publish-breakage": "gh-pages -d breakage",
@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "fugl": "^0.10.1",
+    "fugl": "^0.11.0",
     "ncp": "^2.0.0",
     "semver": "^5.6.0",
     "unexpected": "^10.40.2"
