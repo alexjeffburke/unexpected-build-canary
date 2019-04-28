@@ -44,7 +44,10 @@ function updateDontBreakDefinition(projects) {
 
   dontBreakData.projects = projects;
 
-  fs.writeFileSync(dontBreakFilePath, JSON.stringify(dontBreakData, null, 2));
+  fs.writeFileSync(
+    dontBreakFilePath,
+    JSON.stringify(dontBreakData, null, 2) + '\n'
+  );
 }
 
 got('https://api.github.com/orgs/unexpectedjs/repos', { json: true })
