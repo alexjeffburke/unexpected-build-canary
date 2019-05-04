@@ -2,7 +2,7 @@
     <link href="index.css" rel="stylesheet">
   
   </head><body>
-    <div id="mocha"><ul id="mocha-stats"><li class="progress"><canvas width="40" height="40"></canvas></li><li class="passes"><a href="javascript:void(0);">passes:</a> <em>12</em></li><li class="failures"><a href="javascript:void(0);">failures:</a> <em>5</em></li><li class="duration">duration: <em>447.80</em>s</li></ul><ul id="mocha-report"><li class="test fail"><h2>orc-scripts (pretest) <a href="blank?grep=orc-scripts" class="replay">‣</a></h2><pre class="error">Error: Test Failure
+    <div id="mocha"><ul id="mocha-stats"><li class="progress"><canvas width="40" height="40"></canvas></li><li class="passes"><a href="javascript:void(0);">passes:</a> <em>10</em></li><li class="failures"><a href="javascript:void(0);">failures:</a> <em>7</em></li><li class="duration">duration: <em>804.61</em>s</li></ul><ul id="mocha-report"><li class="test fail"><h2>orc-scripts (pretest) <a href="blank?grep=orc-scripts" class="replay">‣</a></h2><pre class="error">Error: Test Failure
 
 &gt; orc-scripts@0.6.5 test /tmp/fugl/builds/https-github-com-orckestra-orc-scripts-git
 &gt; node src test
@@ -10,8 +10,9 @@
 
     at createError (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:17:10)
     at ChildProcess.npm.on.code (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:58:23)
-    at ChildProcess.emit (events.js:189:13)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:248:12)</pre><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>httpception<span class="duration">74458ms</span> <a href="blank?grep=httpception" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test fail"><h2>expect-react-shallow (pretest) <a href="blank?grep=expect-react-shallow" class="replay">‣</a></h2><pre class="error">Error: Test Failure
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:191:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:219:12)</pre><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>httpception<span class="duration">104225ms</span> <a href="blank?grep=httpception" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test fail"><h2>expect-react-shallow (pretest) <a href="blank?grep=expect-react-shallow" class="replay">‣</a></h2><pre class="error">Error: Test Failure
 
 &gt; expect-react-shallow@1.2.1 test /tmp/fugl/builds/https-github-com-sapegin-expect-react-shallow-git
 &gt; npm run lint &amp;&amp; npm run mocha
@@ -27,8 +28,9 @@
 
     at createError (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:17:10)
     at ChildProcess.npm.on.code (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:58:23)
-    at ChildProcess.emit (events.js:189:13)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:248:12)</pre><pre style="display: none;"><code></code></pre></li><li class="test fail"><h2>uninspected (pretest) <a href="blank?grep=uninspected" class="replay">‣</a></h2><pre class="error">Error: Test Failure
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:191:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:219:12)</pre><pre style="display: none;"><code></code></pre></li><li class="test fail"><h2>uninspected (pretest) <a href="blank?grep=uninspected" class="replay">‣</a></h2><pre class="error">Error: Test Failure
 
 &gt; uninspected@2.0.0 test /tmp/fugl/builds/git-github-com-unexpectedjs-uninspected-git
 &gt; mocha
@@ -49,7 +51,7 @@
       ✓ should do something reasonable when diffing primitive values with no specific built-in diff
 
 
-  7 passing (53ms)
+  7 passing (75ms)
   1 failing
 
   1) uninspected
@@ -70,40 +72,21 @@ to equal '{ \x1b[90m\x1b[38;5;242mfoo\x1b[39m: \x1b[36m\'abc\'\x1b[39m }'
 
     at createError (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:17:10)
     at ChildProcess.npm.on.code (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:58:23)
-    at ChildProcess.emit (events.js:189:13)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:248:12)</pre><pre style="display: none;"><code></code></pre></li><li class="test fail"><h2>swirl <a href="blank?grep=swirl" class="replay">‣</a></h2><pre class="error">Error: Test Failure
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:191:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:219:12)</pre><pre style="display: none;"><code></code></pre></li><li class="test fail"><h2>swirl <a href="blank?grep=swirl" class="replay">‣</a></h2><pre class="error">Error: Install Failure: unable to npm install package
+    at performInstall.then.catch.err (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/NpmStrategy.js:69:15)
+    at process._tickCallback (internal/process/next_tick.js:109:7)</pre><pre style="display: none;"><code></code></pre></li><li class="test fail"><h2>samlogin (pretest) <a href="blank?grep=samlogin" class="replay">‣</a></h2><pre class="error">Error: Test Failure
 
-&gt; swirl@3.0.0 test /tmp/fugl/builds/git-github-com-papandreou-swirl-git
-&gt; mocha &amp;&amp; npm run lint
-
-
-
-  swirl
-    1) should produce some output
-
-
-  0 passing (243ms)
-  1 failing
-
-  1) swirl should produce some output:
-     
-expected Socket
-to yield output satisfying when decoded as 'utf-8' to satisfy /HTTP\/1\.1 .*\/\/ should be 412 Precondition Failed/
-  expected Buffer([])
-  when decoded as 'utf-8' to satisfy /HTTP\/1\.1 .*\/\/ should be 412 Precondition Failed/
-
-     at Array.forEach (&lt;anonymous&gt;)
-  From previous event:
-      at Context.&lt;anonymous&gt; (test/swirl.js:30:13)
-      set UNEXPECTED_FULL_TRACE=true to see the full stack trace
-
-
+&gt; samlogin@1.3.0 test /tmp/fugl/builds/https-github-com-bgshacklett-samlogin-git
+&gt; mocha
 
 
     at createError (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:17:10)
     at ChildProcess.npm.on.code (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:58:23)
-    at ChildProcess.emit (events.js:189:13)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:248:12)</pre><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>samlogin<span class="duration">30755ms</span> <a href="blank?grep=samlogin" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test fail"><h2>test-them-all (pretest) <a href="blank?grep=test-them-all" class="replay">‣</a></h2><pre class="error">Error: Test Failure
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:191:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:219:12)</pre><pre style="display: none;"><code></code></pre></li><li class="test fail"><h2>test-them-all (pretest) <a href="blank?grep=test-them-all" class="replay">‣</a></h2><pre class="error">Error: Test Failure
 
 &gt; test-them-all@3.0.0 test /tmp/fugl/builds/https-github-com-yormi-test-them-all-git
 &gt; NODE_ENV=dev mocha $(find test -name '*_spec.js') --compilers js:babel-core/register -r babel-polyfill -r src/setup/setup --recursive -w
@@ -111,8 +94,19 @@ to yield output satisfying when decoded as 'utf-8' to satisfy /HTTP\/1\.1 .*\/\/
 
     at createError (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:17:10)
     at ChildProcess.npm.on.code (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:58:23)
-    at ChildProcess.emit (events.js:189:13)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:248:12)</pre><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>yify-query<span class="duration">7618ms</span> <a href="blank?grep=yify-query" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>confer-js<span class="duration">7931ms</span> <a href="blank?grep=confer-js" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>ybdb<span class="duration">20966ms</span> <a href="blank?grep=ybdb" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>unchecked<span class="duration">26783ms</span> <a href="blank?grep=unchecked" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>mockrequest<span class="duration">7869ms</span> <a href="blank?grep=mockrequest" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>assert-the-unexpected<span class="duration">14406ms</span> <a href="blank?grep=assert-the-unexpected" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>jest-unexpected<span class="duration">61650ms</span> <a href="blank?grep=jest-unexpected" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>eslint-markdown-test<span class="duration">14096ms</span> <a href="blank?grep=eslint-markdown-test" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>browser-resolve-cli<span class="duration">31893ms</span> <a href="blank?grep=browser-resolve-cli" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>graphql-client-benchmarks<span class="duration">31931ms</span> <a href="blank?grep=graphql-client-benchmarks" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li></ul></div>
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:191:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:219:12)</pre><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>yify-query<span class="duration">13482ms</span> <a href="blank?grep=yify-query" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>confer-js<span class="duration">12877ms</span> <a href="blank?grep=confer-js" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>ybdb<span class="duration">23257ms</span> <a href="blank?grep=ybdb" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test fail"><h2>unchecked (pretest) <a href="blank?grep=unchecked" class="replay">‣</a></h2><pre class="error">Error: Test Failure
+
+&gt; unchecked@1.2.2 test /tmp/fugl/builds/git-github-com-unexpectedjs-unchecked-git
+&gt; mocha test README.md
+
+
+    at createError (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:17:10)
+    at ChildProcess.npm.on.code (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:58:23)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:191:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:219:12)</pre><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>mockrequest<span class="duration">13169ms</span> <a href="blank?grep=mockrequest" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>assert-the-unexpected<span class="duration">28385ms</span> <a href="blank?grep=assert-the-unexpected" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>jest-unexpected<span class="duration">100383ms</span> <a href="blank?grep=jest-unexpected" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>eslint-markdown-test<span class="duration">25296ms</span> <a href="blank?grep=eslint-markdown-test" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>browser-resolve-cli<span class="duration">59459ms</span> <a href="blank?grep=browser-resolve-cli" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>graphql-client-benchmarks<span class="duration">72911ms</span> <a href="blank?grep=graphql-client-benchmarks" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li></ul></div>
   
 
 </body></html>
