@@ -1,11 +1,17 @@
 language: node_js
+
 node_js:
   - '6'
   - '8'
   - '10'
+
+env:
+  - TARGET=ci-npm
+
 script:
   - npm run lint
-  - npm run ci || true
+  - npm run $TARGET
+
 deploy:
   provider: pages
   local-dir: breakage
