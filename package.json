@@ -5,7 +5,7 @@
   "scripts": {
     "ci-npm": "fugl fetch downloads --package unexpected | npm run exec-canary",
     "ci-librariesio": "fugl fetch downloads --package unexpected --librariesio $LIBRARIESIO_API_KEY | npm run exec-canary",
-    "exec-canary": "fugl check --reporter html --ci || true",
+    "exec-canary": "fugl check --reporter html --pretest-or-ignore --ci || true",
     "lint": "eslint ./scripts/*",
     "test": "./scripts/fetch-plugins && fugl --config .dont-break.json --reporter spec",
     "publish-breakage": "gh-pages -d breakage",
