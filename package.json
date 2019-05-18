@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "description": "Automated build tester for Unexpected plugin ecosystem",
   "scripts": {
-    "ci-npm": "fugl fetch downloads --package unexpected | fugl check --reporter html --ci || true",
-    "ci-librariesio": "fugl fetch downloads --package unexpected --librariesio $LIBRARIESIO_API_KEY | fugl check --reporter html --ci || true",
+    "ci-npm": "fugl fetch downloads --package unexpected | npm run exec-canary",
+    "ci-librariesio": "fugl fetch downloads --package unexpected --librariesio $LIBRARIESIO_API_KEY | npm run exec-canary",
+    "exec-canary": "fugl check --reporter html --ci || true",
     "lint": "eslint ./scripts/*",
     "test": "./scripts/fetch-plugins && fugl --config .dont-break.json --reporter spec",
     "publish-breakage": "gh-pages -d breakage",
