@@ -2,40 +2,9 @@
     <link href="index.css" rel="stylesheet">
   
   </head><body>
-    <div id="mocha"><ul id="mocha-stats"><li class="progress"><canvas width="40" height="40"></canvas></li><li class="passes"><a href="javascript:void(0);">passes:</a> <em>13</em></li><li class="failures"><a href="javascript:void(0);">failures:</a> <em>1</em></li><li class="duration">duration: <em>442.66</em>s</li></ul><ul id="mocha-report"><li class="test pass slow"><h2>httpception<span class="duration">74566ms</span> <a href="blank?grep=httpception" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test fail"><h2>swirl <a href="blank?grep=swirl" class="replay">‣</a></h2><pre class="error">Error: Test Failure
-
-&gt; swirl@3.0.0 test /tmp/fugl/builds/git-github-com-papandreou-swirl-git
-&gt; mocha &amp;&amp; npm run lint
-
-
-
-  swirl
-    1) should produce some output
-
-
-  0 passing (232ms)
-  1 failing
-
-  1) swirl should produce some output:
-     
-expected Socket
-to yield output satisfying when decoded as 'utf-8' to satisfy /HTTP\/1\.1 .*\/\/ should be 412 Precondition Failed/
-  expected Buffer.from([])
-  when decoded as 'utf-8' to satisfy /HTTP\/1\.1 .*\/\/ should be 412 Precondition Failed/
-
-     at Array.forEach (&lt;anonymous&gt;)
-  From previous event:
-      at Context.&lt;anonymous&gt; (test/swirl.js:30:13)
-      set UNEXPECTED_FULL_TRACE=true to see the full stack trace
-
-
-
-
-    at createError (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:17:10)
-    at ChildProcess.npm.on.code (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/run-in-folder.js:58:23)
-    at emitTwo (events.js:126:13)
-    at ChildProcess.emit (events.js:214:7)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:198:12)</pre><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>uninspected<span class="duration">17951ms</span> <a href="blank?grep=uninspected" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>samlogin<span class="duration">31820ms</span> <a href="blank?grep=samlogin" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>mockrequest<span class="duration">8333ms</span> <a href="blank?grep=mockrequest" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass pending"><h2>test-them-all (skipped)</h2></li><li class="test pass slow"><h2>eslint-markdown-test<span class="duration">13220ms</span> <a href="blank?grep=eslint-markdown-test" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>unchecked<span class="duration">29127ms</span> <a href="blank?grep=unchecked" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>yify-query<span class="duration">7458ms</span> <a href="blank?grep=yify-query" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>ybdb<span class="duration">21961ms</span> <a href="blank?grep=ybdb" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>confer-js<span class="duration">7758ms</span> <a href="blank?grep=confer-js" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass pending"><h2>orc-scripts (skipped)</h2></li><li class="test pass pending"><h2>expect-react-shallow (skipped)</h2></li><li class="test pass slow"><h2>graphql-client-benchmarks<span class="duration">35875ms</span> <a href="blank?grep=graphql-client-benchmarks" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>assert-the-unexpected<span class="duration">15332ms</span> <a href="blank?grep=assert-the-unexpected" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>jest-unexpected<span class="duration">63241ms</span> <a href="blank?grep=jest-unexpected" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>browser-resolve-cli<span class="duration">32733ms</span> <a href="blank?grep=browser-resolve-cli" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li></ul></div>
+    <div id="mocha"><ul id="mocha-stats"><li class="progress"><canvas width="40" height="40"></canvas></li><li class="passes"><a href="javascript:void(0);">passes:</a> <em>11</em></li><li class="failures"><a href="javascript:void(0);">failures:</a> <em>1</em></li><li class="duration">duration: <em>816.97</em>s</li></ul><ul id="mocha-report"><li class="test pass slow"><h2>httpception<span class="duration">110447ms</span> <a href="blank?grep=httpception" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test fail"><h2>swirl <a href="blank?grep=swirl" class="replay">‣</a></h2><pre class="error">Error: Install Failure: unable to npm install package
+    at performInstall.then.catch.err (/home/travis/build/alexjeffburke/unexpected-build-canary/node_modules/fugl/src/NpmStrategy.js:69:15)
+    at process._tickCallback (internal/process/next_tick.js:109:7)</pre><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>uninspected<span class="duration">38861ms</span> <a href="blank?grep=uninspected" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass pending"><h2>samlogin (skipped)</h2></li><li class="test pass slow"><h2>mockrequest<span class="duration">15476ms</span> <a href="blank?grep=mockrequest" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass pending"><h2>test-them-all (skipped)</h2></li><li class="test pass slow"><h2>eslint-markdown-test<span class="duration">25825ms</span> <a href="blank?grep=eslint-markdown-test" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass pending"><h2>unchecked (skipped)</h2></li><li class="test pass slow"><h2>yify-query<span class="duration">14094ms</span> <a href="blank?grep=yify-query" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>ybdb<span class="duration">25105ms</span> <a href="blank?grep=ybdb" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>confer-js<span class="duration">13859ms</span> <a href="blank?grep=confer-js" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass pending"><h2>orc-scripts (skipped)</h2></li><li class="test pass pending"><h2>expect-react-shallow (skipped)</h2></li><li class="test pass slow"><h2>graphql-client-benchmarks<span class="duration">77387ms</span> <a href="blank?grep=graphql-client-benchmarks" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>assert-the-unexpected<span class="duration">30185ms</span> <a href="blank?grep=assert-the-unexpected" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>jest-unexpected<span class="duration">113572ms</span> <a href="blank?grep=jest-unexpected" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li><li class="test pass slow"><h2>browser-resolve-cli<span class="duration">65572ms</span> <a href="blank?grep=browser-resolve-cli" class="replay">‣</a></h2><pre style="display: none;"><code></code></pre></li></ul></div>
   
 
 </body></html>
