@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "description": "Automated build tester for Unexpected plugin ecosystem",
   "scripts": {
-    "ci-npm": "fugl fetch downloads --package unexpected | npm run exec-canary",
-    "ci-librariesio": "fugl fetch downloads --package unexpected --librariesio $LIBRARIESIO_API_KEY | npm run exec-canary",
-    "exec-canary": "fugl check --reporter html --pretest-or-ignore --ci || true",
+    "ci-npm": "shoulder -l unexpected | xargs | npm run exec-canary",
+    "ci-librariesio": "shoulder -l --librariesio $LIBRARIESIO_API_KEY unexpected | xargs | npm run exec-canary",
+    "exec-canary": "fugl check --package unexpected --reporter html --pretest-or-ignore --ci || true",
     "lint": "eslint ./scripts/*",
     "test": "./scripts/fetch-plugins && fugl --config .dont-break.json --reporter spec",
     "publish-breakage": "gh-pages -d breakage",
@@ -18,9 +18,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "fugl": "^1.2.0",
+    "fugl": "^1.3.0",
     "ncp": "^2.0.0",
     "semver": "^5.6.0",
+    "shoulder": "^0.3.0",
     "unexpected": "^10.40.2"
   },
   "devDependencies": {
